@@ -16,34 +16,35 @@
             @endif
             <div class="panel panel-default">
                 <div class="panel-body">
-                    {!! Form::open(['route' => 'backend.links.store', 'method' => 'post','class'=>'']) !!}
-                    <div class="form-group">
-                        <label for="sequence">排序</label>
-                        <div class="">
-                            {!! Form::text('sequence', '', ['class' => 'form-control','placeholder'=>'sequence']) !!}
-                            <font color="red">{{ $errors->first('sequence') }}</font>
+                    <form action="/backend/links/" method="post" class="">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}" />
+                        <div class="form-group">
+                            <label for="sequence">排序</label>
+                            <div class="">
+                                <input type="text" name="sequence" class="form-control" placeholder="sequence" />
+                                <font color="red">{{ $errors->first('sequence') }}</font>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="name">链接名称</label>
-                        <div class="">
-                            {!! Form::text('name', '', ['class' => 'form-control','placeholder'=>'name']) !!}
-                            <font color="red">{{ $errors->first('name') }}</font>
+                        <div class="form-group">
+                            <label for="name">链接名称</label>
+                            <div class="">
+                                <input type="text" name="name" class="form-control" placeholder="name" />
+                                <font color="red">{{ $errors->first('name') }}</font>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="url">链接地址</label>
-                        <div class="">
-                            {!! Form::text('url', '', ['class' => 'form-control','placeholder'=>'url']) !!}
-                            <font color="red">{{ $errors->first('url') }}</font>
+                        <div class="form-group">
+                            <label for="url">链接地址</label>
+                            <div class="">
+                                <input type="text" name="url" class="form-control" placeholder="http://www.fidding.me/" />
+                                <font color="red">{{ $errors->first('url') }}</font>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="">
-                            {!! Form::submit('添加', ['class' => 'btn btn-success']) !!}
+                        <div class="form-group">
+                            <div class="">
+                                <input type="submit" class="btn btn-success" value="添加" />
+                            </div>
                         </div>
-                    </div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>

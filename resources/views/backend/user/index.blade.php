@@ -38,23 +38,20 @@
                                     <td>{{ $v->email }}</td>
                                     <td>{{ $v->created_at }}</td>
                                     <td class="text-right">
-                                        {!! Form::open([
-                                            'route' => array('backend.user.destroy', $v->id),'method' => 'delete','class'=>'btn_form btn-delete-form'
-                                            ]) !!}
-
-                                        <button type="submit" class="btn btn-danger">
-                                            <em class="fa fa-remove" aria-hidden="true"></em>
-                                            删除
-                                        </button>
-                                        {!! Form::close() !!}
-                                        {!! Form::open([
-                                            'route' => array('backend.user.edit', $v->id),'method' => 'get','class'=>'btn_form'
-                                            ]) !!}
-                                        <button type="submit" class="btn btn-info">
-                                            <em class="fa fa-pencil-square-o" aria-hidden="true"></em>
-                                            修改
-                                        </button>
-                                        {!! Form::close() !!}
+                                        <form action="/backend/user/{{ $v->id }}" method="POST" class="btn_form btn-delete-form">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                            <button type="submit" class="btn btn-danger">
+                                                <em class="fa fa-remove" aria-hidden="true"></em>
+                                                删除
+                                            </button>
+                                        </form>
+                                        <form action="/backend/user/{{$v->id}}/edit" method="get" class="btn_form">
+                                            <button type="submit" class="btn btn-info">
+                                                <em class="fa fa-pencil-square-o" aria-hidden="true"></em>
+                                                修改
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach

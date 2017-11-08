@@ -9,7 +9,7 @@
                 <a class="mb-sm btn btn-success" href="{{ url('/backend/system/create') }}">创建设置</a>
             </div>
             <div class="panel panel-default clearfix">
-                <form action="{{ url('backend/system/store')}}" method="post" class="" >
+                <form action="/backend/system/store" method="post" class="" >
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="table-response">
                         <table class="table table-striped table-bordered table-hover">
@@ -29,7 +29,7 @@
                                             {{Lang::get('backend_config.'.$v->system_name)}}
                                         </td>
                                         <td>
-                                            {!! Form::text('system['.$v->system_name.']', $v->system_value, ['class' => 'form-control']) !!}
+                                            <input type="text" class="form-control" name="system[{{$v->system_name}}]" value="{{$v->system_value}}">
                                         </td>
                                         <td class="text-right">
                                             <a href="{{ url('/backend/system/delete',['id'=>$v->id]) }}" class="btn btn-danger" >

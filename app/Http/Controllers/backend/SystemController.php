@@ -31,7 +31,6 @@ class SystemController extends Controller
 
     public function postCreate(SystemForm $result)
     {
-
         try {
             if (System::create($result->all())) {
                 Notification::success('添加成功,请修改语言包文件');

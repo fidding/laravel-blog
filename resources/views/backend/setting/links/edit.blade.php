@@ -16,34 +16,36 @@
             @endif
             <div class="panel panel-default">
                 <div class="panel-body">
-                    {!! Form::model($link, ['route' => ['backend.links.update', $link->id], 'method' => 'put','class'=>'']) !!}
+                    <form action="/backend/links/{{$link->id}}" method="post" class="">
+                        <input type="hidden" name="_method" value="put">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
                     <div class="form-group">
                         <label for="sequence">排序</label>
                         <div class="">
-                            {!! Form::text('sequence', $link->sequence, ['class' => 'form-control','placeholder'=>'sequence']) !!}
+                            <input type="text" name="sequence" class="form-control" placeholder="sequence" value="{{$link->sequence?$link->sequence:''}}" />
                             <font color="red">{{ $errors->first('sequence') }}</font>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="name">链接名称</label>
                         <div class="">
-                            {!! Form::text('name', $link->name, ['class' => 'form-control','placeholder'=>'name']) !!}
+                            <input type="text" name="name" class="form-control" placeholder="name" value="{{$link->name?$link->name:''}}" />
                             <font color="red">{{ $errors->first('name') }}</font>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="url">链接地址</label>
                         <div class="">
-                            {!! Form::text('url', $link->url, ['class' => 'form-control','placeholder'=>'url']) !!}
+                            <input type="text" name="url" class="form-control" placeholder="http://www.fidding.me/" value="{{$link->url?$link->url:''}}" />
                             <font color="red">{{ $errors->first('url') }}</font>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="">
-                            {!! Form::submit('修改', ['class' => 'btn btn-success']) !!}
+                            <input type="submit" class="btn btn-success" />
                         </div>
                     </div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>

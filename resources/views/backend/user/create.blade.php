@@ -16,49 +16,50 @@
             @endif
             <div class="panel panel-default">
                 <div class="panel-body">
-                    {!! Form::open(['route' => 'backend.user.store', 'method' => 'post','class'=>'','enctype'=>'multipart/form-data']) !!}
-                    <div class="form-group">
-                        <label for="name" class="">用户名</label>
-                        <div class="">
-                            {!! Form::text('name', '', ['class' => 'form-control','placeholder'=>'Username']) !!}
-                            <font color="red">{{ $errors->first('name') }}</font>
+                    <form action="/backend/user" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+                        <div class="form-group">
+                            <label for="name" class="">用户名</label>
+                            <div class="">
+                                <input type="text" class="form-control" name="name" placeholder="Username" />
+                                <font color="red">{{ $errors->first('name') }}</font>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-sm-2 control-label">邮箱</label>
-                        <div class="">
-                            {!! Form::text('email', '', ['class' => 'form-control','placeholder'=>'Email']) !!}
-                            <font color="red">{{ $errors->first('email') }}</font>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">邮箱</label>
+                            <div class="">
+                                <input type="text" class="form-control" name="email" placeholder="Email" />
+                                <font color="red">{{ $errors->first('email') }}</font>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">密码</label>
-                        <div class="">
-                            {!! Form::text('password', '', ['class' => 'form-control','placeholder'=>'Password']) !!}
-                            <font color="red">{{ $errors->first('password') }}</font>
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <div class="">
+                                <input type="password" class="form-control" name="password" placeholder="Password" />
+                                <font color="red">{{ $errors->first('password') }}</font>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label  class="">头像</label>
-                        <div class="">
-                            {!! Form::file('photo') !!}
-                            <font color="red">{{ $errors->first('photo') }}</font>
+                        <div class="form-group">
+                            <label  class="">头像</label>
+                            <div class="">
+                                <input type="file" class="photo" name="photo">
+                                <font color="red">{{ $errors->first('photo') }}</font>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="" class="">简介</label>
-                        <div class="editor">
-                            @include('editor::head')
-                            {!! Form::textarea('desc', '', ['class' => 'form-control','id'=>'myEditor']) !!}
-                            <font color="red">{{ $errors->first('desc') }}</font>
+                        <div class="form-group">
+                            <label for="" class="">简介</label>
+                            <div class="editor">
+                                @include('editor::head')
+                                <textarea name="desc" class="form-control" id="myEditor"></textarea>
+                                <font color="red">{{ $errors->first('desc') }}</font>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="">
-                            {!! Form::submit('创建', ['class' => 'ml btn btn-success']) !!}
+                        <div class="form-group">
+                            <div class="">
+                                <input type="submit" class="ml btn btn-success" />
+                            </div>
                         </div>
-                    </div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>

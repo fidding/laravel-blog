@@ -21,26 +21,30 @@
                         <div class="form-group">
                             <label for="cate">分类</label>
                             <div class="">
-                                {!! Form::select('cate', App\Model\System::$cate , null , ['class' => 'form-control']) !!}
+                                <select name="cate" class="form-control">
+                                    @foreach (App\Model\System::$cate as $k => $c)
+                                        <option value="{{$k}}">{{$c}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="system_name">代码</label>
                             <div class="">
-                                {!! Form::text('system_name', '', ['class' => 'form-control','placeholder'=>'code']) !!}
+                                <input type="text" name="system_name" class="form-control" placeholder="code" />
                                 <font color="red">{{ $errors->first('system_name') }}</font>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="system_value">值</label>
                             <div>
-                                {!! Form::text('system_value', '', ['class' => 'form-control','placeholder'=>'system_value']) !!}
+                                <input type="text" name="system_value" class="form-control" placeholder="system_value" />
                                 <font color="red">{{ $errors->first('system_value') }}</font>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-10">
-                                {!! Form::submit('创建', ['class' => 'btn btn-success']) !!}
+                                <input type="submit"  value="创建" class="btn btn-success" />
                             </div>
                         </div>
                     </form>
