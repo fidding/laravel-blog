@@ -16,57 +16,62 @@
             @endif
             <div class="panel panel-default">
                 <div class="panel-body">
-                    {!! Form::open(['route' => 'backend.cate.store', 'method' => 'post','class'=>'']) !!}
-                    <div class="form-group">
-                        <label for="parent_id">上级分类</label>
-                        <div class="">
-                            {!! Form::select('parent_id', $catArr , null , ['class' => 'form-control']) !!}
+                    <form action="/backend/cate/" method="post" class="">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}" />
+                        <div class="form-group">
+                            <label for="parent_id">上级分类</label>
+                            <div class="">
+                                <select name="parent_id" class="form-control">
+                                    @foreach ($catArr as $k => $v)
+                                        <option value="{{$k}}">{{$v}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="cate_name">分类名称</label>
-                        <div class="">
-                            {!! Form::text('cate_name', '', ['class' => 'form-control','placeholder'=>'category_name']) !!}
-                            <font color="red">{{ $errors->first('cate_name') }}</font>
+                        <div class="form-group">
+                            <label for="cate_name">分类名称</label>
+                            <div class="">
+                                <input type="text" name="cate_name" class="form-control" placeholder="category_name">
+                                <font color="red">{{ $errors->first('cate_name') }}</font>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="as_name">英文别名</label>
-                        <div class="">
-                            {!! Form::text('as_name', '', ['class' => 'form-control','placeholder'=>'as_name']) !!}
-                            <font color="red">{{ $errors->first('as_name') }}</font>
+                        <div class="form-group">
+                            <label for="as_name">英文别名</label>
+                            <div class="">
+                                <input type="text" name="as_name" class="form-control" placeholder="as_name">
+                                <font color="red">{{ $errors->first('as_name') }}</font>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="seo_title">seo 标题</label>
-                        <div class="">
-                            {!! Form::text('seo_title', '', ['class' => 'form-control','placeholder'=>'seo_title']) !!}
-                            <font color="red">{{ $errors->first('seo_title') }}</font>
+                        <div class="form-group">
+                            <label for="seo_title">seo 标题</label>
+                            <div class="">
+                                <input type="text" name="seo_title" class="form-control" placeholder="seo_title">
+                                <font color="red">{{ $errors->first('seo_title') }}</font>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="seo_key">seo 关键字</label>
-                        <div>
-                            {!! Form::text('seo_key', '', ['class' => 'form-control','placeholder'=>'seo_key']) !!}
-                            <font color="red">{{ $errors->first('seo_key') }}</font>
+                        <div class="form-group">
+                            <label for="seo_key">seo 关键字</label>
+                            <div>
+                                <input type="text" name="seo_key" class="form-control" placeholder="seo_key">
+                                <font color="red">{{ $errors->first('seo_key') }}</font>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="seo_desc">seo 描述</label>
-                        <div>
-                            {!! Form::textarea('seo_desc', '', ['class' => 'form-control']) !!}
-                            <font color="red">{{ $errors->first('seo_desc') }}</font>
+                        <div class="form-group">
+                            <label for="seo_desc">seo 描述</label>
+                            <div>
+                                <input type="text" name="seo_desc" class="form-control" placeholder="seo_desc">
+                                <font color="red">{{ $errors->first('seo_desc') }}</font>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="">
-                            {!! Form::submit('创建', ['class' => 'btn btn-success']) !!}
+                        <div class="form-group">
+                            <div class="">
+                                <input type="submit" value="创建" class="btn btn-success">
+                            </div>
                         </div>
-                    </div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>

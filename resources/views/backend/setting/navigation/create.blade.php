@@ -16,34 +16,35 @@
             @endif
             <div class="panel panel-default">
                 <div class="panel-body">
-                    {!! Form::open(['route' => 'backend.nav.store', 'method' => 'post','class'=>'']) !!}
+                    <form action="/backend/nav/" method="post" class="">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                         <div class="form-group">
                             <label for="sequence">排序</label>
                             <div class="">
-                                {!! Form::text('sequence', '', ['class' => 'form-control','placeholder'=>'sequence']) !!}
+                                <input type="text" name="sequence" class="form-control" placeholder="sequence" />
                                 <font color="red">{{ $errors->first('sequence') }}</font>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="name">导航名称</label>
                             <div class="">
-                                {!! Form::text('name', '', ['class' => 'form-control','placeholder'=>'name']) !!}
+                                <input type="text" name="name" class="form-control" placeholder="name" />
                                 <font color="red">{{ $errors->first('name') }}</font>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="url">链接地址</label>
                             <div class="">
-                                {!! Form::text('url', '', ['class' => 'form-control','placeholder'=>'url']) !!}
+                                <input type="text" name="url" class="form-control" placeholder="url" />
                                 <font color="red">{{ $errors->first('url') }}</font>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="">
-                                {!! Form::submit('创建', ['class' => 'btn btn-success']) !!}
+                                <input type="submit" value="创建" class="btn btn-success">
                             </div>
                         </div>
-                        {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>

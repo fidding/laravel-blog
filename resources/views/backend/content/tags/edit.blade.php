@@ -16,21 +16,22 @@
             @endif
             <div class="panel panel-default">
                 <div class="panel-body">
-                    {!! Form::model($tag, ['route' => ['backend.tags.update', $tag->id], 'method' => 'put','class'=>'']) !!}
-                    <div class="form-group">
-                        <label for="name">标签名</label>
-                        <div class="">
-                            {!! Form::text('name', $tag->name, ['class' => 'form-control','placeholder'=>'Tag Name']) !!}
-                            <font color="red">{{ $errors->first('name') }}</font>
+                    <form action="/backend/tags/{{$tag->id}}" method="post" class="">
+                        <input type="hidden" name="_method" value="put">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+                        <div class="form-group">
+                            <label for="name">标签名</label>
+                            <div class="">
+                                <input type="text" name="name" value="{{$tag->name?$tag->name:''}}" class="form-control" placeholder="Tag Name">
+                                <font color="red">{{ $errors->first('name') }}</font>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="">
-                            {!! Form::submit('修改', ['class' => 'btn btn-success']) !!}
+                        <div class="form-group">
+                            <div class="">
+                                <input type="submit" value="修改" class="btn btn-success" />
+                            </div>
                         </div>
-                    </div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>

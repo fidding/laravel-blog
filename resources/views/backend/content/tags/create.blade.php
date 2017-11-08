@@ -16,21 +16,22 @@
             @endif
             <div class="panel panel-default">
                 <div class="panel-body">
-                    {!! Form::open(['route' => 'backend.tags.store', 'method' => 'post','class'=>'']) !!}
-                    <div class="form-group">
-                        <label for="name">标签名</label>
-                        <div class="">
-                            {!! Form::text('name', '', ['class' => 'form-control','placeholder'=>'标签名称']) !!}
-                            <font color="red">{{ $errors->first('name') }}</font>
+                    <form action="/backend/tags/" method="post" class="">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+                        <div class="form-group">
+                            <label for="name">标签名</label>
+                            <div class="">
+                                <input type="text" name="name" class="form-control" placeholder="便签名称">
+                                <font color="red">{{ $errors->first('name') }}</font>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <div class="">
-                            {!! Form::submit('添加', ['class' => 'btn btn-success']) !!}
+                        <div class="form-group">
+                            <div class="">
+                                <input type="submit" value="添加" class="btn btn-success">
+                            </div>
                         </div>
-                    </div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>

@@ -78,7 +78,6 @@
                             <div class="about-inner">
                                 <a  href="{{ url('about') }}" title="{{ $article->user->name }}">
                                     <img class="img-circle" src="{{ asset('uploads'.'/'.$article->user->photo) }}" alt="{{ $article->user->name }}" title="{{ $article->user->name }}"/>
-
                                     {{ $article->user->name }}<br/>
                                 </a>
                             </div>

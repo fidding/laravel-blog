@@ -19,31 +19,41 @@
             @endif
             <div class="panel panel-default">
                 <div class="panel-body">
-                    {!! Form::model($article, ['route' => ['backend.article.update', $article->id], 'method' => 'put','class'=>'','enctype'=>'multipart/form-data']) !!}
-                    <div class="form-group">
-                        <label for="title" class="">标题</label>
+                    <form action="/backend/article/{{$article->id}}" method="post" class="" enctype="multipart/form-data">
+                        <input type="hidden" name="_method" value="put">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+                        <div class="form-group">
+                            <label for="title" class="">标题</label>
                         <div class="">
-                            {!! Form::text('title', $article->title, ['class' => 'form-control','placeholder'=>'title']) !!}
+                            <input type="text" name="title" class="form-control" placeholder="标题" value="{!! $article->title?$article->title:'' !!}">
                             <font color="red">{{ $errors->first('title') }}</font>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="cate_id" class="">所属分类</label>
                         <div class="">
-                            {!! Form::select('cate_id', $catArr , null , ['class' => 'form-control']) !!}
+                            <select name="cate_id" class="form-control">
+                                @foreach ($catArr as $k => $v)
+                                    @if ($k == $article->cate_id)
+                                        <option value="{{$k}}" selected="selected">{{$v}}</option>
+                                    @else
+                                        <option value="{{$k}}">{{$v}}</option>
+                                    @endif
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="tags" class="">标签</label>
                         <div class="">
-                            {!! Form::text('tags', '', ['class' => 'form-control','placeholder'=>'回车确定','id'=>'tags']) !!}
+                            <input type="text" name="tags" class="form-control" placeholder="回车确定" id="tags" />
                             <font color="red">{{ $errors->first('tags') }}</font>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="pic" class="">封面图</label>
                         <div class="col-sm-12">
-                            {!! Form::file('pic') !!}
+                            <input type="file" name="pic"/>
                             <font color="red">{{ $errors->first('pic') }}</font>
                             @if(!empty($article->pic))
                                 <img  src="{{ asset('/uploads').'/'.$article->pic }}" width="300px" height="100"/>
@@ -55,7 +65,7 @@
                         <div class="">
                             <div class="editor">
                                 @include('editor::head')
-                                {!! Form::textarea('content', $article->content, ['class' => 'form-control','id'=>'myEditor']) !!}
+                                <textarea name="content" class="form-control" id="myEditor">{!! $article->content?$article->content:'' !!}</textarea>
                             </div>
                             <font color="red">{{ $errors->first('content') }}</font>
                         </div>
@@ -63,10 +73,10 @@
 
                     <div class="form-group">
                         <div class="">
-                            {!! Form::submit('修改', ['class' => 'btn btn-success']) !!}
+                            <input type="submit" value="修改" class="btn btn-success">
                         </div>
                     </div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>
