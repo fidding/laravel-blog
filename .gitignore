@@ -1,0 +1,7 @@
+/bootstrap/compiled.php
+.env
+.idea
+/public/uploads/*
+/vendor
+/node_modules
+/yezi/*

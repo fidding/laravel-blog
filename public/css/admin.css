@@ -1,0 +1,19 @@
+.panel-default > .panel-heading {
+    background-color: #ffffff;
+}
+.wrapper>aside.aside{
+    z-index:10;
+}
+.wrapper .navbar.topnavbar{
+    z-index:20;
+}
+.wrapper .content-wrapper{
+    margin-top:0px;
+}
+.editor{
+    width:100%!important;
+}
+
+.login-logo{
+    height:40px;
+}
