@@ -648,6 +648,25 @@ label.input-desc{
 
 }
 
+/** donate **/
+.content .donate {
+    margin-top: 50px;
+    margin-bottom:20px;
+}
+.content .donate p {
+    font-size: 14px;
+    color: #666;
+}
+
+.content .donate .donate-box {
+    margin-bottom: 10px;
+}
+.content .donate img {
+    border: 1px solid #ddd;
+    padding: 5px;
+    width: 100%;
+}
+
 @media (max-width: 768px){
     .navbar-white .navbar-brand{
         height:75px;

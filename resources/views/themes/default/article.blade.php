@@ -51,6 +51,18 @@
                 <article class="article-content markdown-body">
                     {!! conversionMarkdown($article->content) !!}
                 </article>
+                <!-- donate -->
+                <div class="donate clearfix">
+                    <p>如果喜欢我的文章，不介意的话请杯咖啡吧~</p>
+                    <div class="donate-box col-md-3 col-sm-4 col-xs-10">
+                        <p class="text-center bold">支付宝</p>
+                        <img src="/donate/lADPBbCc1UxddObNA8zNAsw_716_972.jpg" />
+                    </div>
+                    <div class="donate-box col-md-3 col-sm-4 col-xs-10">
+                        <p class="text-center bold">微信</p>
+                        <img src="/donate/lALPBbCc1Uxilj7NA2LNArs_699_866.png" />
+                    </div>
+                </div>
                 <div class="share">
                     <div class="share-bar"></div>
                 </div>
