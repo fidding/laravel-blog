@@ -11,6 +11,8 @@
         @yield('homecss')
         <meta property="og:type" content="article">
         <meta property="og:locale" content="zh_CN" />
+        <!-- talkingdata -->
+        <script src="http://sdk.talkingdata.com/app/h5/v1?appid=CA7156ED75114910BED0ACD39274EDDD&vn=fidding博客&vc=1.0.0"></script>
     </head>
     <body class="home">
         <header class="header">
