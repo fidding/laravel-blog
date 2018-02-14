@@ -34,7 +34,10 @@
                             @endif
                             &nbsp;&nbsp;
                             <em class="fa fa-calendar"></em> {{ $article->created_at->format('Y/m/d') }}
+                            &nbsp;&nbsp;
+                            <em class="fa fa-eye"></em> {{ $article->click }}
                         </span>
+
                     </div>
                     <div class="collection-info">
                         <span class="meta-info">
@@ -64,22 +67,40 @@
                     </div>
                 </div>
                 <div class="share">
-                    <div class="share-bar"></div>
+                    <div class="share-bar"><span style="color: #999">分享: </span>&nbsp;</div>
                 </div>
-                <div class="comment">
-                    <div class="comments">
-                        <div id="disqus_thread"></div>
-                        <script type="text/javascript">
-                            var disqus_shortname = "{{ config('disqus.disqus_shortname') }}";
-                            (function() {
-                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                            })();
-                        </script>
-                        <noscript>Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;</noscript>
-                    </div>
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDE1Ny8xMDY5NA==">
+                    <script type="text/javascript">
+                     (function(d, s) {
+                         var j, e = d.getElementsByTagName(s)[0];
+
+                         if (typeof LivereTower === 'function') { return; }
+
+                         j = d.createElement(s);
+                         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                         j.async = true;
+
+                         e.parentNode.insertBefore(j, e);
+                     })(document, 'script');
+                    </script>
+                    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
                 </div>
+                <!-- City版安装代码已完成 -->
+                <!-- <div class="comment"> -->
+                <!-- <div class="comments"> -->
+                <!-- <div id="disqus_thread"></div> -->
+                <!-- <script type="text/javascript"> -->
+                <!-- var disqus_shortname = "{{ config('disqus.disqus_shortname') }}"; -->
+                <!-- (function() { -->
+                <!-- var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; -->
+                <!-- dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; -->
+                <!-- (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); -->
+                <!-- })(); -->
+                <!-- </script> -->
+                <!-- <noscript>Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;</noscript> -->
+                <!-- </div> -->
+                <!-- </div> -->
             </div>
 
             <div class="col-md-3 mt30">
