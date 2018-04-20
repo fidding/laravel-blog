@@ -56,14 +56,15 @@
                 </article>
                 <!-- donate -->
                 <div class="donate clearfix">
-                    <p>如果喜欢我的文章，不介意的话请杯咖啡吧~</p>
+                    <p>每一个不曾起舞的日子,都是对生命的辜负 ^-^</p>
+                    <!-- <p>如果喜欢我的文章，不介意的话请杯咖啡吧~</p> -->
                     <div class="donate-box col-md-3 col-sm-4 col-xs-10">
                         <p class="text-center bold">支付宝</p>
-                        <img src="/donate/lADPBbCc1UxddObNA8zNAsw_716_972.jpg" />
+                        <img src="/donate/alipay.jpeg" />
                     </div>
                     <div class="donate-box col-md-3 col-sm-4 col-xs-10">
                         <p class="text-center bold">微信</p>
-                        <img src="/donate/lALPBbCc1Uxilj7NA2LNArs_699_866.png" />
+                        <img src="/donate/wxpay.jpeg" />
                     </div>
                 </div>
                 <div class="share">
