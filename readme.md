@@ -81,8 +81,8 @@ Blog system development based on laravel  5.1.*
 
 (当前使用)评论为第三方评论系统'来必力'，使用方法如下
 
-1. 先注册账户https://livere.com/ 并获取站点id
-2. 修改文件 resources/views/themes/default/article.blade.php文件
+1. 先注册账户https://livere.com/ 并获取站点uid
+2. 修改配置文件`config/livere.php` 里面的`livere_uid` 配置项为你刚得到的id
 
 
 ### 借鉴

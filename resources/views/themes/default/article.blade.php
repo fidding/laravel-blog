@@ -71,7 +71,7 @@
                     <div class="share-bar"><span style="color: #999">分享: </span>&nbsp;</div>
                 </div>
                 <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDE1Ny8xMDY5NA==">
+                <div id="lv-container" data-id="city" data-uid="{{ config('livere.livere_uid') }}">
                     <script type="text/javascript">
                      (function(d, s) {
                          var j, e = d.getElementsByTagName(s)[0];
