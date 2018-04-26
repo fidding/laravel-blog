@@ -56,7 +56,7 @@ Blog system development based on laravel  5.1.*
 9. 填充数据
 
 	```
-        composer drump-autoload
+        composer dump-autoload
 		php artisan db:seed
 	```
 

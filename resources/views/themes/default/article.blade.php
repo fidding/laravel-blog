@@ -8,12 +8,12 @@
 
 @section('homecss')
     <link rel="stylesheet" href="{{ homeAsset('/css/globals/common.css') }}">
-    <link rel="stylesheet" href="{{ homePlugin('/prism/prism.css') }}">
+    <link rel="stylesheet" href="{{ homePlugin('/prism/prism-solarized-light.css') }}">
     <link rel="stylesheet" href="{{ homeAsset('/vendor/share.js/dist/css/share.min.css') }}">
 @endsection
 
 @section('homejs')
-    <script src="{{ homePlugin('/prism/prism.js') }}"></script>
+    <script src="{{ homePlugin('/prism/prism-solarized-light.js') }}"></script>
     <script src="{{ homeAsset('/vendor/share.js/dist/js/jquery.qrcode.min.js') }}"></script>
     <script src="{{ homeAsset('/vendor/share.js/dist/js/share.min.js') }}"></script>
 
