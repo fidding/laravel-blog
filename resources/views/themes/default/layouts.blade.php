@@ -31,7 +31,16 @@
                             <a><em class="fa fa-user"></em>&nbsp;&nbsp;洪加煌技术博客</a>
                         </div>
                         <div class="pull-right social-icons">
-                            <a class="social-icon pull-right" rel="nofollow" href="https://github.com/fidding" target=_blank><em class="fa fa-github"></em></a>
+                            <a rel="alternate" type="application/rss+xml" href="{{ url('rss') }}" title="RSS Feed {{ config('blog.title') }}">
+                                &nbsp;
+                                <em class="fa fa-rss"></em>
+                            </a>
+                        </div>
+                        <div class="pull-right social-icons">
+                            <a class="social-icon pull-right" rel="nofollow" href="https://github.com/fidding" target=_blank>
+                                &nbsp;
+                                <em class="fa fa-github"></em>
+                            </a>
                         </div>
                     </div>
                 </div>

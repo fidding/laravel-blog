@@ -20,6 +20,7 @@ Route::resource('category', 'CategoryController');
 Route::resource('about', 'AboutController');
 Route::resource('message', 'MessageController');
 Route::get('sitemap.xml', 'SitemapController@index');
+Route::get('rss', 'RssController@index');
 
 Route::controllers([
     'backend/auth' => 'backend\AuthController',
