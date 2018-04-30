@@ -16,7 +16,7 @@
             @endif
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <form action="/backend/nav/" method="post" class="">
+                    <form action="/backend/nav" method="post" class="">
                         <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                         <div class="form-group">
                             <label for="sequence">排序</label>

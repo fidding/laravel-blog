@@ -20,7 +20,7 @@
             <div class="panel panel-default">
 
                 <div class="panel-body">
-                    <form action="/backend/article/" method="post" class="" enctype="multipart/form-data">
+                    <form action="/backend/article" method="post" class="article-form" enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <div class="form-group">
                             <label for="title">标题</label>

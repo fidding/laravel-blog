@@ -16,7 +16,7 @@
             @endif
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <form action="/backend/cate/" method="post" class="">
+                    <form action="/backend/cate" method="post" class="cate-form">
                         <input type="hidden" name="_token" value="{{csrf_token()}}" />
                         <div class="form-group">
                             <label for="parent_id">上级分类</label>
