@@ -214,7 +214,7 @@ if (!function_exists('viewInit')) {
 
         $view->share('category', $category::getCategoryTree());
         $view->share('cateArr', $category::getCategoryTreeArr());
-        $view->share('hotArticleList', $article::getHotArticle(3));
+        $view->share('hotArticleList', $article::getHotArticle(8));
         $view->share('tagList', $tags::getHotTags(12));
         $view->share('navList', $nav::getNavigationAll());
         $view->share('linkList', $links::getLinkList());

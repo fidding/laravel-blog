@@ -6,3 +6,4 @@
 /node_modules
 /yezi/*
 .ac-php-conf.json
+.DS_Store
