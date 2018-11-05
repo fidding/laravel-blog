@@ -73,13 +73,13 @@ Blog system development based on laravel  5.1.*
 
 ### 安装评论
 
-(已移除)评论为国外第三方的DISQUS，使用方法如下
+**(已移除)**评论为国外第三方的DISQUS，使用方法如下
 
 1. 先注册账户 https://disqus.com/ 得到你的站点 id
 2. 修改配置文件 `config/disqus.php` 里面的 `disqus_shortname` 配置项为你刚得到的 id
 3. 安装完成
 
-(当前使用)评论为第三方评论系统'来必力'，使用方法如下
+**(当前使用)**评论为第三方评论系统'来必力'，使用方法如下
 
 1. 先注册账户https://livere.com/ 并获取站点uid
 2. 修改配置文件`config/livere.php` 里面的`livere_uid` 配置项为你刚得到的id
