@@ -5,6 +5,7 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>洪加煌博客系统</title>
+        <link rel="icon" href="{{ asset('favicon.png') }}">
         <link rel="stylesheet" href="{{ homePlugin('/fontawesome/css/font-awesome.min.css') }}">
         <link rel="stylesheet" href="{{ homePlugin('/simple-line-icons/css/simple-line-icons.css') }}">
         <link rel="stylesheet" href="{{ homePlugin('/animate.css/animate.min.css') }}">
