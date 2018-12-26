@@ -13,11 +13,12 @@ if (!function_exists('baiduPush')) {
      */
     function baiduPush($articleId)
     {
-        $api = Config::get('app.baidupush');
-        if(!$api){
+        $token = Config::get('app.baidu_push_token');
+        if(!$token){
             //没有设置百度推送，直接返回
             return true;
         }
+        $api = 'http://data.zz.baidu.com/urls?site=' . $_SERVER['SERVER_NAME'] . '&token=' . $token;
         $urls = array(
             $_SERVER['SERVER_NAME'].'/article/'.$articleId
         );
