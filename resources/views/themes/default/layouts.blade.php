@@ -120,7 +120,7 @@
         <!-- / footer -->
         <script src="{{ homePlugin('/jquery/dist/jquery.js') }}"></script>
         <script src="{{ homePlugin('/bootstrap/dist/js/bootstrap.js') }}"></script>
-        <script src="{{ asset('/public/js/baidupush.js') }}"></script>
+        <script src="{{ asset('/js/baidupush.js') }}"></script>
         <script src="{{asset('js/home.js')}}"></script>
         @yield('homejs')
     </body>
