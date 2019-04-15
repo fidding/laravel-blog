@@ -14,6 +14,14 @@
         <link rel="icon" href="{{ asset('favicon.png') }}">
         <!-- talkingdata -->
         <script src="http://sdk.talkingdata.com/app/h5/v1?appid=CA7156ED75114910BED0ACD39274EDDD&vn=fidding博客&vc=1.0.0"></script>
+        <!-- google ad scene -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-7837642167534676",
+                enable_page_level_ads: true
+            });
+        </script>
     </head>
     <body class="home">
         <header class="header">
