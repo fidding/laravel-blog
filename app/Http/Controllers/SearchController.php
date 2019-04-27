@@ -12,14 +12,12 @@ use Illuminate\Support\Facades\Response;
 class SearchController extends Controller
 {
 
-    public function getKeyword(Request $request)
+    public function getKeyword(Request $request, $keyword)
     {
-        $keyword = $request->input('keyword');
         if (empty($keyword)) {
             return redirect()->route('article.index');
         }
         $article = Article::getArticleListByKeyword($keyword);
-
         $page = new EndaPage($article['page']);
         viewInit();
         return homeView('search', [

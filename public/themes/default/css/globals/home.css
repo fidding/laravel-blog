@@ -666,6 +666,12 @@ label.input-desc{
     padding: 5px;
     width: 100%;
 }
+li.disabled {
+    float: right;
+}
+li.previous.disabled {
+    float: left;
+}
 
 @media (max-width: 768px){
     .navbar-white .navbar-brand{

@@ -9,6 +9,7 @@ $(function () {
         }
         return flag;
     }
+
     //navbar
     if(IsPC()){
         //解决pc与移动端hover事件与click事件冲突
@@ -20,9 +21,18 @@ $(function () {
             $(this).find('em').removeClass('rotate');
         })
     }
+
     //artile share
     if($('.share-bar').length){
         $('.share-bar').share();
     }
 
+    // 点击搜索按钮
+    $("#search_submit .fa-search").click(function () {
+        window.location.href = "/search/keyword/" + $("#navbar_search").val();
+    });
+    // 提交搜索表单
+    $("#header-search-form .container").submit(function () {
+        window.location.href = "/search/keyword/" + $("#navbar_search").val();
+    });
 })

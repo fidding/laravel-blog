@@ -26,9 +26,9 @@
     <body class="home">
         <header class="header">
             <div id="header-search-form" class="navbar-search collapse">
-                <form class="container" action="{{url('search/keyword')}}" method="get">
+                <form class="container" action="{{url('search/keyword')}}" method="get" onsubmit="return false">
                     <input type="search" id="navbar_search" name="keyword" class="form-control" placeholder="请输入搜索内容，回车搜索..."/>
-                    <button id="search_submit" type="submit" title="搜索">
+                    <button id="search_submit" type="button" title="搜索">
                         <em class="fa fa-search"></em>
                     </button>
                 </form>
