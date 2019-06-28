@@ -23,7 +23,8 @@ Blog system development based on laravel  5.1.*
 
     ```shell
     cd laravel-blog/
-    composer install
+    // 忽略install, 已经连同vendor包一起上传了
+    //composer install 
     ```
 
 3. 修改 `.env.example` 为 `.env`
