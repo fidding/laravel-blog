@@ -12,6 +12,31 @@
         <meta property="og:type" content="article">
         <meta property="og:locale" content="zh_CN" />
         <link rel="icon" href="{{ asset('favicon.png') }}">
+        <!-- baidu statistics -->
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?383af625f8c838afd1c5f520ee3250a8";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+        <!-- baidu auto push -->
+        <script>
+            (function(){
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            })();
+        </script>
         <!-- talkingdata -->
         <script src="http://sdk.talkingdata.com/app/h5/v1?appid=CA7156ED75114910BED0ACD39274EDDD&vn=fidding博客&vc=1.0.0"></script>
         <!-- google ad scene -->
