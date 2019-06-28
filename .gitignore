@@ -2,7 +2,6 @@
 .env
 .idea
 /public/uploads/*
-/vendor
 /node_modules
 /yezi/*
 .ac-php-conf.json
