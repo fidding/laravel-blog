@@ -145,7 +145,7 @@
                 <div class="copyright text-center">
                     Copyright © 2016 <a href="{{url('/')}}">fidding</a> All Rights Reserved
                     @if(systemConfig('put_on_record'))
-                        | <a rel="nofollow" href="http://www.miitbeian.gov.cn/"> {{ systemConfig('put_on_record') }}</a>
+                        | <a rel="nofollow" href="https://beian.miit.gov.cn"> {{ systemConfig('put_on_record') }}</a>
                     @endif
                 </div>
             </div>
